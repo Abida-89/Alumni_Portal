@@ -1,0 +1,275 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>PUC Alumni</title>
+        <link rel="icon" href="img/pucLogo.jpg" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+      <!-- Top Bar: Search + Login/Register -->
+        <div class="bg-white shadow-md sticky top-0 z-50">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-12">
+            
+            <!-- Search Bar -->
+            <form class="relative w-full max-w-md">
+              <input aria-label="Search" class="w-full rounded-full border border-gray-300 pl-10 pr-4 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Search..." type="text" />
+                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <i class="fas fa-search"></i>
+                </span>
+            </form>
+
+            <!-- Login/Register Buttons -->
+            <div class="flex space-x-3">
+              <a href="login-page/login.php"><button class="bg-blue-600 text-white font-semibold rounded px-3 py-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 rounded px-3 py-1" id="loginBtn">Login</a>
+              <a href="login-page/register.php"><button class="bg-blue-600 text-white font-semibold rounded px-3 py-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 rounded px-3 py-1" id="registerBtn">Register</a>                        
+            </div>
+          </div>
+        </div>
+
+            <!-- Navigation Bar -->
+            <nav class="bg-white shadow sticky top-[48px] z-40">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div class="flex justify-between h-14">
+                      <div class="flex items-center space-x-8">
+                          <a class="flex items-center space-x-3" href="index.php"><img alt="PUC Alumni logo" class="w-10 h-10" height="40" src="img/pucLogo.jpg" width="40"/>
+                              <span class="font-bold text-xl text-blue-800 select-none">PUC Alumni</span>
+                          </a>
+              <ul class="hidden md:flex space-x-6 items-center text-gray-700 font-medium">
+                  <li><a class="hover:text-blue-600 transition" href="index.php">Home</a></li>
+                  <li><a class="hover:text-blue-600 transition" href="index.php#about">About</a></li>
+                  <li><a class="hover:text-blue-600 transition" href="index.php#alumni">Alumni</a></li>
+                  <li><a class="hover:text-blue-600 transition" href="index.php#event">Event</a></li>
+                      <li class="relative group">
+                          <button aria-expanded="false" aria-haspopup="true" class="flex items-center space-x-1 hover:text-blue-600 transition focus:outline-none" id="pagesMenuBtn">
+                              <span>Pages</span>
+                              <i class="fas fa-chevron-down text-sm"></i>
+                          </button>
+                          
+                          <ul aria-label="submenu" class="absolute left-0 mt-1 w-48 bg-white border border-gray-200 rounded shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity">
+                              <li><a class="block px-4 py-2 hover:bg-blue-50 text-gray-700" href="index.php#event">Gallery</a></li>
+                              <li><a class="block px-4 py-2 hover:bg-blue-50 text-gray-700" href="login-page/register.php"> Register</a></li>
+                              <li><a class="block px-4 py-2 hover:bg-blue-50 text-gray-700" href="jobs.html">Jobs & Opportunities</a></li>
+                          </ul>
+                      </li>
+                  <li><a class="hover:text-blue-600 transition" href="index.php#contact">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Mobile Menu -->
+              <div class="hidden md:hidden bg-white border-t border-gray-200" id="mobileMenu">
+                <ul class="flex flex-col space-y-1 p-4 text-gray-700 font-medium">
+                    <li><a class="block py-2 hover:text-blue-600" href="index.php">Home</a></li>
+                    <li><a class="block py-2 hover:text-blue-600" href="about.php">About</a></li>
+                    <li><a class="block py-2 hover:text-blue-600" href="view_members.php">Alumni</a></li>
+                    <li><a class="block py-2 hover:text-blue-600" href="index.php#event">Event</a></li>
+                    <li><button class="w-full text-left flex justify-between items-center py-2 hover:text-blue-600 focus:outline-none" id="mobilePagesBtn">Pages<i class="fas fa-chevron-down"></i></button>
+                        <ul class="hidden pl-4 mt-1 space-y-1" id="mobilePagesMenu">
+                            <li><a class="block py-1 hover:text-blue-600" href="index.php#event">Gallery</a></li>
+                            <li><a class="block py-1 hover:text-blue-600" href="login-page/register.php">Register</a></li>
+                            <li><a class="block py-1 hover:text-blue-600" href="jobs.html">Jobs & Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="block py-2 hover:text-blue-600" href="index.php#contact">Contact Us</a></li>
+                </ul>
+            </div>
+          </nav>
+        
+        <div class="container py-4">
+          <h1 class="text-center fw-semibold mb-4" style="font-size: 16px; color: #1a1a1a">
+            Jobs & Opportunities<br>
+            Find the latest job and internship opportunities from companies and
+            alumni.
+          </h1>
+        <div class="row g-3" id="job-list">
+          <div class="col-12 col-sm-6">
+            <div class="job-card d-flex flex-column align-items-center">
+              <img src="https://media.licdn.com/dms/image/v2/D560BAQFGJSEhMZourQ/company-logo_100_100/company-logo_100_100/0/1715523100909?e=1750896000&v=beta&t=9rLW1N1kLk-7YJdptv57VDL091ZUiJFM-xh40KtWKCg" alt="Company logo with blue and blue flame icon" width="60" height="60"class="mb-2" />
+                <h3>Virtual Assistant (Work From Home)</h3>
+                <p>
+                  Persona works with the world’s fastest-growing technology
+                  startups. Our clients are funded by some of the world’s top
+                  investors, like Founders Fund, Sequoia Capital, and Andreessen
+                  Horowitz.
+                </p>
+                <a href="https://www.linkedin.com/jobs/view/4212608537/"><button class="btn-apply">APPLY NOW</button></a>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="job-card d-flex flex-column align-items-center">
+                <img src="https://media.licdn.com/dms/image/v2/D560BAQFP2_v6zGgavA/company-logo_100_100/company-logo_100_100/0/1735932161692/micro1_logo?e=1750896000&v=beta&t=zDHMi9O-MqsJBr7jU6d-qa42cLdTSfPfoa2db46_HgQ" alt="Logo text with yellow and blue abstract icon" width="60" height="60" class="mb-2"/>
+                <h3>Creative Writing</h3>
+                <p>
+                  At our company, we are committed to fostering the professional
+                  growth of our employees and supporting their career development
+                  through various upskilling initiatives and resources.
+                </p>
+                <a href="https://www.linkedin.com/jobs/view/4213115144/">
+                  <button class="btn-apply">APPLY NOW</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="job-card d-flex flex-column align-items-center">
+                <img src="https://storage.googleapis.com/a1aa/image/945a9e90-0e9b-4110-2210-c9e8b6040464.jpg" alt="Company logo with blue and blue flame icon" width="60" height="60" class="mb-2"/>
+                <h3>Backend Developer (Java) (m/f) wanted for leading</h3>
+                <p>
+                  Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  Claritas est etiam processus est etiam processus dynamicus [...]
+                </p>
+                <button class="btn-expired" disabled>EXPIRED</button>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="job-card d-flex flex-column align-items-center">
+                <img src="https://bdjobs.com/images/bdjobsLogo.svg" alt="Logo text with yellow and blue abstract icon" width="60" height="60" class="mb-2"/>
+                <h3>Discover Jobs Across Popular Category & Industry</h3>
+                <p>Largest Job site in Bangladesh</p>
+                <a href="https://bdjobs.com/" target="blank">
+                  <button class="btn-apply" >APPLY NOW</button></a>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="job-card d-flex flex-column align-items-center">
+                <img src="https://storage.googleapis.com/a1aa/image/1747ad4c-65b2-49bb-c82d-e7b1ae89bbf3.jpg" alt="Logo text with blue and blue globe icon" width="60" height="60" class="mb-2"/>
+                <h3>Remotely - Javascript Developer Node.js</h3>
+                <p>
+                  Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  Claritas est etiam processus est etiam processus dynamicus [...]
+                </p>
+                <button class="btn-expired" disabled>EXPIRED</button>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6">
+              <div class="job-card d-flex flex-column align-items-center">
+                <img src="https://storage.googleapis.com/a1aa/image/6c1ad34a-fb3f-4856-e1e5-66a9d6d116d2.jpg" alt="Master logo with blue M letter icon" width="60" height="60" class="mb-2"/>
+                <h3>Five Years Experience Data Center Specialist Needed</h3>
+                <p>
+                  Claritas est etiam processus dynamicus, qui sequitur mutationem
+                  Claritas est etiam processus est etiam processus dynamicus [...]
+                </p>
+                <a href="http://blank" target="blank"><button class="btn-apply">APPLY NOW</button></a>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="d-flex justify-content-center">
+            <button id="loadMoreBtn" class="btn-all-jobs">ALL JOB LIST</button>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-300 mt-16">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a class="hover:text-white" href="index.php">Home</a></li>
+                <li><a class="hover:text-white" href="about.php">About</a></li>
+                <li><a class="hover:text-white" href="mem-reg/view_members.php">Alumni</a></li>
+                <li><a class="hover:text-white" href="index.php#event">Event</a></li>
+                <li><a class="hover:text-white" href="jobs.html">Jobs & Opportunities</a></li>
+                <li><a class="hover:text-white" href="index.php#contact">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-white font-bold text-lg mb-4">Address</h3>
+              <address class="not-italic">
+                Premier University Chittagong<br />
+                Chittagong, Bangladesh<br />
+                Phone: +880 31 1234567<br />
+                Email: info@puc.ac.bd
+              </address>
+            </div>
+
+            <div class="flex items-end justify-end text-sm text-gray-500">
+              © 2025 Premier University Chittagong Alumni.<br>
+              All rights reserved.
+            </div>
+          </div>
+        </footer>
+
+    <script>
+      // job section
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      const jobList = document.getElementById('job-list');   
+      if (loadMoreBtn && jobList) {
+        loadMoreBtn.addEventListener('click', () => {
+          const jobs = [
+          {
+            imgSrc: "https://storage.googleapis.com/a1aa/image/945a9e90-0e9b-4110-2210-c9e8b6040464.jpg",
+            imgAlt: "Company logo with blue and orange flame icon",
+            title: "New Job Option One",
+            desc: "Claritas est etiam processus dynamicus...",
+            btnClass: "btn-apply",
+            btnText: "APPLY NOW",
+            disabled: false
+          },
+          {
+            imgSrc: "https://storage.googleapis.com/a1aa/image/bf2a042d-1aa6-4381-5251-1beaedc9e571.jpg",
+            imgAlt: "Logo text with yellow and orange abstract icon",
+            title: "New Job Option Two",
+            desc: "Claritas est etiam processus dynamicus...",
+            btnClass: "btn-expired",
+            btnText: "EXPIRED",
+            disabled: true
+          }
+        ];
+  
+        jobs.forEach(job => {
+          const colDiv = document.createElement('div');
+          colDiv.className = 'col-12 col-sm-6';
+  
+          const cardDiv = document.createElement('div');
+          cardDiv.className = 'job-card d-flex flex-column align-items-center';
+  
+          const img = document.createElement('img');
+          img.src = job.imgSrc;
+          img.alt = job.imgAlt;
+          img.width = 60;
+          img.height = 60;
+          img.className = 'mb-2';
+  
+          const h3 = document.createElement('h3');
+          h3.textContent = job.title;
+  
+          const p = document.createElement('p');
+          p.textContent = job.desc;
+  
+          const btn = document.createElement('button');
+          btn.className = job.btnClass;
+          btn.textContent = job.btnText;
+          if (job.disabled) {
+            btn.disabled = true;
+          }
+  
+          cardDiv.appendChild(img);
+          cardDiv.appendChild(h3);
+          cardDiv.appendChild(p);
+          cardDiv.appendChild(btn);
+          colDiv.appendChild(cardDiv);
+          jobList.appendChild(colDiv);
+        });
+  
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.style.cursor = 'default';
+      });
+    }
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
