@@ -1,0 +1,234 @@
+  body {
+      font-family: 'Roboto', sans-serif;
+      text-align: justify;
+    }
+
+  /*about section*/
+  header {
+    background: linear-gradient(to bottom, black, #2f3437);
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar {
+    background-color: #f8fafb;
+    border: 1px solid #dee2e6;
+    border-right: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    min-width: 200px;
+  }
+  .sidebar h2 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 0;
+  }
+  .nav-link {
+    color: #6c757d;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid transparent;
+  }
+  .nav-link.active {
+    color: #3f3cdd;
+    background-color: #f0f7f7;
+    border-left-color: #a4161a;
+    font-weight: 500;
+  }
+  .content {
+    background: white;
+    border-radius: 0 0.25rem 0.25rem 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    font-size: 0.875rem;
+    color: #212529;
+    line-height: 1.5;
+  }
+  .content h3 {
+    color: #a4161a;
+    font-weight: 600;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .left-images img {
+    border-radius: 0.25rem;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 768px) {
+    .left-images img:first-child {
+      height: 160px;
+      width: auto;
+      margin-bottom: 0;
+    }
+    .left-images img:last-child {
+      height: 160px;
+      width: 100%;
+    }
+  }
+        /* Alumni card hover effect */
+      .alumni-card:hover {
+        box-shadow: 0 8px 20px rgba(32, 96, 180, 0.4);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+        /* Rounded arrow button */
+      .round-arrow-btn {
+        background-color: #144999;
+        color: white;
+        border-radius: 9999px;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .round-arrow-btn:hover {
+        background-color: #144999;
+      }
+      
+      /* Scrollbar for event images container */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    
+    
+
+      /*job section*/
+      .job-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        padding: 1rem;
+        text-align: center;
+        font-size: 12px;
+        color: #1a1a1a;
+      }
+      .job-card h3 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+      }
+      .job-card p {
+        font-size: 15px;
+        color: #666666;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+      }
+      .btn-apply {
+        background-color: #144999;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 0.25rem 1.25rem;
+        border-radius: 0.25rem;
+        border: none;
+      }
+      .btn-expired {
+        font-size: 20px;
+        color: #666666;
+        border: 2px solid #d1d5db;
+        background: white;
+        padding: 0.25rem 1.25rem;
+        border-radius: 0.25rem;
+        cursor: default;
+      }
+      .btn-all-jobs {
+        background-color: #144999;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 0.5rem 2.5rem;
+        border-radius: 0.25rem;
+        border: none;
+        margin-top: 2rem;
+      }
+      @media (max-width: 576px) {
+        .job-card h3 {
+          font-size: 11px;
+        }
+        .job-card p {
+          font-size: 9px;
+        }
+        .btn-apply, .btn-expired {
+          font-size: 9px;
+          padding: 0.2rem 1rem;
+        }
+        .btn-all-jobs {
+          font-size: 11px;
+          padding: 0.4rem 2rem;
+        }
+      }
+
+  /* Scroll animations base styles */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Extra Animation Variations */
+  .scroll-animate[data-animate="slide-right"] {
+    transform: translateX(-30px);
+  }
+  .scroll-animate.scrolled[data-animate="slide-right"] {
+    transform: translateX(0);
+  }
+
+  .scroll-animate[data-animate="zoom-in"] {
+    transform: scale(0.8);
+  }
+  .scroll-animate.scrolled[data-animate="zoom-in"] {
+    transform: scale(1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar hide */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  /* auto slideshow */
+  .slider-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slider-images {
+    display: flex;
+    transition: transform 1s ease;
+  }
+
+  .slider-image {
+    width: 100%;
+  }
